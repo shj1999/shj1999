@@ -5,8 +5,8 @@ var gqs = 0;//关卡数
 var tj = 5;//通关条件
 var hp1 = 100;//怪物1hp
 var hp2 = 100;//怪物2hp
-canvas.width = 544;//画布宽度定义
-canvas.height = 416;//画布高度定义
+canvas.width = 620;//画布宽度定义
+canvas.height = 480;//画布高度定义
 document.body.appendChild(canvas);
 
 // 背景图片属性
@@ -23,14 +23,14 @@ var heroImage = new Image();
 heroImage.onload = function () {
 	heroReady = true;
 };
-heroImage.src = "images/dijia.png";
+heroImage.src = "images/pkq.png";
 
 var BulletReady = false;
 var BulletImage = new Image();
 BulletImage.onload = function () {
 	BulletReady = true;
 };
-BulletReady.src = "images/gemola.png";
+BulletReady.src = "images/xhl.png";
 
 // 怪物1属性
 var monsterReady = false;
@@ -41,10 +41,10 @@ monsterImage.onload = function () {
 var m1 = Math.round(Math.random())
 // alert(m1);
 if (m1 == 0) {
-	monsterImage.src = "images/gemola.png";
+	monsterImage.src = "images/jng.png";
 
 } else {
-	monsterImage.src = "images/geerzan.png";
+	monsterImage.src = "images/mwzz.png";
 
 }
 //怪物2属性
@@ -56,10 +56,10 @@ monsterImage2.onload = function () {
 var m1 = Math.round(Math.random())
 // alert(m1);
 if (m1 == 0) {
-	monsterImage2.src = "images/gemola.png";
+	monsterImage2.src = "images/jng.png";
 
 } else {
-	monsterImage2.src = "images/geerzan.png";
+	monsterImage2.src = "images/mwzz.png";
 
 }
 
@@ -140,10 +140,10 @@ var update = function (modifier) {
 			hp1=100;
 			var m1 = Math.round(Math.random())
 			if (m1 == 0) {
-				monsterImage.src = "images/gemola.png";
+				monsterImage.src = "images/jng.png";
 
 			} else {
-				monsterImage.src = "images/geerzan.png";
+				monsterImage.src = "images/mwzz.png";
 
 			}
 
@@ -168,10 +168,10 @@ var update = function (modifier) {
 		hp2=100;
 		var m1 = Math.round(Math.random())
 		if (m1 == 0) {
-			monsterImage2.src = "images/gemola.png";
+			monsterImage2.src = "images/jng.png";
 
 		} else {
-			monsterImage2.src = "images/geerzan.png";
+			monsterImage2.src = "images/mwzz.png";
 
 		}
 
@@ -212,7 +212,7 @@ var render = function () {
 	ctx.textBaseline = "top";
 	ctx.fillText("击杀数: " + monstersCaught, 32, 22);
 	ctx.fillText("关卡数: " + gqs, 32, 60);
-	ctx.fillText("目标击杀: " + tj + "只怪兽", 200, 22);
+	ctx.fillText("目标击杀: " + tj + "只野生宠物", 200, 22);
 	//ctx.font="10px Georgia";
 	ctx.fillText("HP: " + hp1, monster.x-10, monster.y+50);
 	ctx.fillText("HP: " + hp2, monster2.x-10, monster2.y+50);
